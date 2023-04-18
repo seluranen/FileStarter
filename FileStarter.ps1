@@ -460,7 +460,7 @@ function TryToMove($object)
         }
 
         $destDesktop = Get-Desktop $($object.desktop - 1)
-	DebugMessage "Moving $($object.hwnd) to desktop $($object.desktop) - $(Get-DesktopName $destDesktop)”
+	DebugMessage "Moving $($object.hwnd) to desktop $($object.desktop) - $(Get-DesktopName $destDesktop)"
 	try
         {
             $object.hwnd | Move-Window $destDesktop | Out-Null
